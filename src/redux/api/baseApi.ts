@@ -3,7 +3,9 @@ import { type ApiResponse, type Book, type Borrow } from "./types";
 
 export const booksApi = createApi({
   reducerPath: "libraryApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api" }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://b5-assignment-03.vercel.app/api",
+  }),
   tagTypes: ["Books", "Borrow"],
   endpoints: (builder) => ({
     getBooks: builder.query<Book[], void>({
